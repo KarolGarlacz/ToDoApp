@@ -4,33 +4,9 @@ import TaskList from "./TaskList";
 import "./App.css";
 
 class App extends Component {
+  counter = 4;
   state = {
-    tasks: [
-      {
-        id: 0,
-        text: "zagrać",
-        date: "2020-08-09",
-        important: true,
-        active: true,
-        finishDate: null,
-      },
-      {
-        id: 1,
-        text: "wygrać",
-        date: "2020-08-09",
-        important: false,
-        active: true,
-        finishDate: null,
-      },
-      {
-        id: 2,
-        text: "przegrać",
-        date: "2020-08-09",
-        important: true,
-        active: false,
-        finishDate: null,
-      },
-    ],
+    tasks: [],
   };
   deleteTask = (id) => {
     console.log("delete w komponencie App" + id);
@@ -62,12 +38,29 @@ class App extends Component {
       tasks,
     });
   };
+  addTask = (text, date, important) => {
+    console.log("dodaj");
+    const task = {
+      id: this.counter,
+      text: text,
+      date: date,
+      important: important,
+      active: true,
+      finishDate: null,
+    };
+    this.counter++;
+
+    this.setState((prevState) => ({
+      tasks: [...prevState.tasks, task],
+    }));
+    return true;
+  };
 
   render() {
     return (
       <div className='App'>
-        TODOAPP
-        <AddTask />
+        <h1>TODO APP</h1>
+        <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
