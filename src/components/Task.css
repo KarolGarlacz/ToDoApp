@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.accept {
+  color: green;
+  margin-right: 5px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid green;
+}
+.cancel {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: red;
+  box-shadow: 0 0 3px red;
+  background-color: #fff;
+  outline: none;
+}

@@ -1,14 +1,31 @@
 input {
-  margin: 10px;
+  margin: 20px 10px;
   padding: 5px 10px;
   font-size: 20px;
+  border-radius: 25px;
+  outline: none;
 }
 .form {
+  text-align: center;
+  background-color: ivory;
   font-size: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .form button {
-  padding: 3px 10px;
-  text-transform: uppercase;
-  margin: 20px;
-  font-size: 20px;
+  margin-left: 20px;
+  background: none;
+  color: #ccc;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #000;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 3px #111111;
+}
+.form button:hover {
+  color: #000;
 }
